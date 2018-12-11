@@ -38,4 +38,6 @@ model.fit(
     y_train,
     batch_size=2, # 16, 32, 64, 256,
     epochs=100 # number iteration over set (more epochs better train, but takes longer)
+    verbose=1,
+    validation_split=0.2
 )
