@@ -33,11 +33,15 @@ y_train = np.array([
     [106.75]
 ])
 
+perm = np.random.permutation(y_train.size)
+x_train = x_train[perm]
+y_train = y_train[perm]
+
 model.fit(
     x_train,
     y_train,
     batch_size=2, # 16, 32, 64, 256,
-    epochs=100 # number iteration over set (more epochs better train, but takes longer)
+    epochs=100, # number iteration over set (more epochs better train, but takes longer)
     verbose=1,
     validation_split=0.2
 )
